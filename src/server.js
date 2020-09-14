@@ -2,7 +2,7 @@ var express = require('express');
 // require('../').config({ path: 'dev' });
 var ejs = require('ejs');
 require('dotenv').config();
-  
+
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
@@ -15,6 +15,8 @@ var MongoStore = require('connect-mongo')(session);
 //   useCreateIndex: true,
 //   useFindAndModify: false
 // })
+
+const port = process.env.PORT 
 
 console.log(process.env.MONGODB_URL);
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -60,6 +62,6 @@ app.use(function (err, req, res, next) {
 
 
 // listen on port 3000
-app.listen(3000, function () {
-  console.log('Express app listening on port 3000');
+app.listen(port, function () {
+  console.log('Express app listening on port '+ port);
 });
