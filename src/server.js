@@ -1,5 +1,8 @@
 var express = require('express');
+// require('../').config({ path: 'dev' });
 var ejs = require('ejs');
+require('dotenv').config();
+  
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
@@ -7,11 +10,14 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-})
+// mongoose.connect(process.env.MONGODB_URL, {
+//   useNewUrlParser: true,
+//   useCreateIndex: true,
+//   useFindAndModify: false
+// })
+
+console.log(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
