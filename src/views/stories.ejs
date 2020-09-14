@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Story</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		body{
+			background-color: cadetblue;
+		}
+		h1{
+			text-align: center;
+			color: lavender;
+			background-color: rgb(63, 117, 97);
+			background-size: 300px 1000px;
+			height: 50px;
+			padding: 5px 5px;
+		}
+
+		.title{
+			text-align: center;
+			color: lavender;
+			background-color: rgb(63, 117, 97);
+			height: 35px;
+			width: 200px;
+			padding: 5px 5px 5px 5px;
+			margin-left: 570px;
+			font-weight: bolder;
+			
+		}
+		p{
+			text-indent: 50px;
+			text-align: justify;
+			letter-spacing: 3px;
+			font-weight: bolder;
+			font-size: 180%;
+			padding: 50px 50px;
+			font-family: "Times New Roman", Times, serif;
+			line-height: 1.6;
+			color: purple;
+		}
+
+		.btn{
+			display:inline-block;
+			 padding: 0.3em 1.2em;
+			 margin: 0 0.3em 0.3em 0;
+			 border-radius: 2em;
+			 box-sizing: border-box;
+			 text-decoration: none;
+			 font-family: 'Roboto',sans-serif;
+			 font-weight: 300;
+			 color:#FFFFFF;
+			 background-color:#4eb5f1;
+			 text-align:center;
+			 transition: all 0.2s;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div >
+		<div>
+					<a href="/profile" class="btn">Back</a><h1>Story</h1>
+					<h2 class="title"><%= story.Title %></h2>
+					<p><%= story.Content %></p>
+					<p>views:<%= story.viewCount %></p>
+
+		</div>
+		
+			
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

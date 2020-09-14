@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<style>
+
+		body{
+			background-color: blanchedalmond;
+		}
+		h1{
+			background-color:grey;
+			color: lightgoldenrodyellow;
+		}
+
+		.tab{
+			border-radius: 25px;
+			background-color: lightgrey;
+			width: 300px;
+			border: 15px solid green;
+			padding: 50px;
+			height: 50px;
+			
+		}
+		.abc{
+			 display:inline-block;
+			 padding: 0.3em 1.2em;
+			 margin: 0 0.3em 0.3em 0;
+			 border-radius: 2em;
+			 box-sizing: border-box;
+			 text-decoration: none;
+			 font-family: 'Roboto',sans-serif;
+			 font-weight: 300;
+			 color:#FFFFFF;
+			 background-color:#4eb5f1;
+			 text-align:center;
+			 transition: all 0.2s;
+			
+		}
+		tr{
+			color: teal;
+			background-color: blanchedalmond;
+			font-weight: bold;
+		}
+		.story{
+			background-color: blanchedalmond;
+		}
+		h2{
+			width: 300px;
+			border: 25px solid grey;
+			padding: 50px;
+			margin: 20px;
+			color: indigo;
+			font-weight: bolder;
+			font-size: xx-large;
+		}
+		.btn{
+			display:inline-block;
+			 padding: 0.3em 1.2em;
+			 margin: 0 0.3em 0.3em 0;
+			 border-radius: 2em;
+			 box-sizing: border-box;
+			 text-decoration: none;
+			 font-family: 'Roboto',sans-serif;
+			 font-weight: 300;
+			 color:#FFFFFF;
+			 background-color:#4eb5f1;
+			 text-align:center;
+			 transition: all 0.2s;
+		}
+		a.btn:hover{
+			background-color: 	#4095c6;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<div class="header">
+			<center>
+				<h1>Profile Detail</h1>
+			</center>
+		</div>
+		<div class="tab"">
+			<center>
+				<table class="table1">
+					<tr><td>Name: </td><td><%= name %></td></tr>
+					<tr><td>Email: </td><td><%= email %></td></tr>
+				</table><br>
+
+				<div class="abc">
+					<a href="/logout">Logout</a>
+				</div>
+			</center>
+		</div>
+		
+	</div>
+	
+	<center>
+		<div>
+			<h1>Stories</h1>
+			<div class="story">
+			<% for (let story of stories) { %>
+				<h2><%= story.Title %></h2>
+				<a href="/getContent/<%= story._id %>" class="btn">View</a>
+                                   
+
+
+			<% } %>
+
+			</div>
+		</div>
+	</center>
+</body>
+
+
+</html>
+
+
