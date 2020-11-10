@@ -16,7 +16,7 @@ var MongoStore = require('connect-mongo')(session);
 //   useFindAndModify: false
 // })
 
-const port = process.env.PORT 
+const port = process.env.PORT || 3000
 
 console.log(process.env.MONGODB_URL);
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true});

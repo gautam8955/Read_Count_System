@@ -55,16 +55,37 @@
 			 transition: all 0.2s;
 		}
 
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 100%;width: 100%;
+			margin: auto;
+			text-align: center;
+			font-family: arial;
+			height: 100%;
+			background-color: rgb(247, 242, 229);
+
+		}
+		.view{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			max-width: 250px;width: 250px;
+			margin: auto;
+			font-family: arial;
+			height: 20px;
+			background-color: rgb(247, 242, 229);
+		}
+
 
 	</style>
 </head>
 <body>
 	<div >
 		<div>
-					<a href="/profile" class="btn">Back</a><h1>Story</h1>
-					<h2 class="title"><%= story.Title %></h2>
-					<p><%= story.Content %></p>
-					<p>views:<%= story.viewCount %></p>
+					<a href="/profile" class="btn">Back</a><h1>Story: <%= story.Title %></h1>
+					<!-- <h2 class="title"><%= story.Title %></h2> -->
+					<div class="card">
+						<p><%= story.Content %></p>
+					</div>
+					<p class="view">views:<%= story.viewCount %></p>
 
 		</div>
 		
